@@ -1,21 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Instagram PrivSniffer</title>
-    <base href="/InstagramPrivSniffer-web/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
     <!-- NAVBAR  -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#1a1b1e;;">
         <div class="container-fluid">
-            <span><img src="static/logo.png" alt="" style="width: 35px;"> <a class="navbar-brand" href="#">
-                    InstagramPrivsniffer</a></span>
+            <!--Tool-->
+            <span><img src="static/logo.png" alt="" style="width: 35px;">
+                <a class="navbar-brand" href="https://github.com/obitouka/InstagramPrivSniffer">
+                    <strong style="font-size:18px;color:#E700FF;">INSTAGRAM</strong><strong style="font-size:18px;color:#FF0000;">PrivSniffer</strong>
+                </a>
+            </span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -23,11 +26,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!--Home-->
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="index.html">Home</a>
                     </li>
+                    <!--Documentation-->
                     <li class="nav-item">
                         <a class="nav-link" href="documentation.html">Documentation</a>
+                    </li>
+                    <!--Contact-->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
                     </li>
 
                     <!--Topics-->
@@ -47,16 +56,15 @@
                         </ul>
                     </li>
                     -->
-                    
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact</a>
-                    </li>
                 </ul>
+
+                <!--Search-->
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
 
+                <!--Account-->
                 <div class="mx-3">
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                         data-bs-target="#loginModal">Login</button>
@@ -66,7 +74,6 @@
             </div>
         </div>
     </nav>
-
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -134,7 +141,6 @@
 
     <!--CONTACTS-->
     <div class="container my-4">
-        <h2>Contact</h2>
         <form class="row g-3">
             <!--EMAIL-->
             <div class="col-md-6">
@@ -172,15 +178,23 @@
 
             <!--FORUMS-->
             <div class="my-6">
-                <label for="exampleFormControlTextarea1" class="form-label">From where you got to know about this
+                <label for="source" class="form-label">From where you got to know about this
                     tool?</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Found this from youtube. 
+                <textarea class="form-control" id="source" rows="4" placeholder="Found this from youtube. 
 Source: https://youtu.be/wxc8N70Da8E"></textarea>
             </div>
 
+            <!--Query-->
             <div class="my-6">
-                <label for="exampleFormControlTextarea1" class="form-label">Elaborate your concern:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+                <label for="query" class="form-label">Elaborate your concern:</label>
+                <textarea class="form-control" id="query" rows="4"
+                    placeholder="Type here..."></textarea>
+            </div>
+
+            <!--feedback-->
+            <div class="my-6">
+                <label for="feedback" class="form-label">Any feedback or suggestion:</label>
+                <textarea class="form-control" id="feedback" rows="4"
                     placeholder="Type here..."></textarea>
             </div>
 
@@ -195,14 +209,43 @@ Source: https://youtu.be/wxc8N70Da8E"></textarea>
     <!--FOOTER-->
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <p class="col-md-4 mb-0 text-body-secondary">© 2025
-                <a href="https://github.com/obitouka/InstagramPrivSniffer">Obitouka</a>. Released under MIT License.
-            </p>
-            <img src="static/logo.png" alt="" style="width: 50px;">
-            <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-                <li class="nav-item"><a href="documentation.html" class="nav-link px-2 text-body-secondary">Documentation</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-body-secondary">Contact</a></li>
+
+            <!-- LEFT SIDE -->
+            <div class="col-md-6 d-flex align-items-center">
+                <img src="static/logo.png" height="35" class="me-2" alt="logo">
+
+                <span class="text-muted">
+                    © 2025
+                    <a href="https://github.com/obitouka/InstagramPrivSniffer">
+                        Obitouka
+                    </a>.
+                    Released under MIT License.
+                </span>
+            </div>
+
+            <!-- RIGHT SIDE ICONS -->
+            <ul class="nav col-md-6 justify-content-end list-unstyled d-flex">
+
+                <!-- TELEGRAM -->
+                <li class="ms-3">
+                    <a class="text-muted" href="https://t.me/voidologist">
+                        <img src="static/icons/telegram.png" width="28" height="28" alt="Telegram">
+                    </a>
+                </li>
+
+                <!-- GITHUB -->
+                <li class="ms-3">
+                    <a class="text-muted" href="https://github.com/obitouka/">
+                        <img src="static/icons/github.png" width="28" height="28" alt="GitHub">
+                    </a>
+                </li>
+
+                <!-- EMAIL -->
+                <li class="ms-3">
+                    <a class="text-muted" href="mailto:obitouka@protonmail.com">
+                        <img src="static/icons/protonmail.png" width="28" height="28" alt="Email">
+                    </a>
+                </li>
             </ul>
         </footer>
     </div>
@@ -212,5 +255,4 @@ Source: https://youtu.be/wxc8N70Da8E"></textarea>
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
