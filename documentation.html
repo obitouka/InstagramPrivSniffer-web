@@ -11,27 +11,54 @@
     <style>
         .btn-danger,
         .btn-primary,
-        .btn-success {
+        .btn-success,
+        #box1 {
             transition: all 0.3s ease-in-out;
             border: none;
         }
+
         .btn-danger {
             box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
         }
-        .btn-primary {
-            box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
-        }
-        .btn-success {
-            box-shadow: 0 0 10px rgba(25, 135, 84, 0.5);
-        }
+
         .btn-danger:hover {
             box-shadow: 0 0 12px rgba(220, 53, 69, 0.8), 0 0 10px rgba(220, 53, 69, 0.4);
         }
+
+        .btn-primary {
+            box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
+        }
+
         .btn-primary:hover {
             box-shadow: 0 0 12px rgba(13, 110, 253, 0.8), 0 0 10px rgba(13, 110, 253, 0.4);
         }
+
+        .btn-success {
+            box-shadow: 0 0 10px rgba(25, 135, 84, 0.5);
+        }
+
         .btn-success:hover {
             box-shadow: 0 0 12px rgba(25, 135, 84, 0.8), 0 0 10px rgba(25, 135, 84, 0.4);
+        }
+
+        #box1 {
+            box-shadow: 0 0 10px rgba(252, 255, 90, 0.5);
+        }
+
+        #box1:hover {
+            box-shadow: 0 0 15px rgba(252, 255, 90, 0.8), 0 0 10px rgba(252, 255, 90, 0.4);
+        }
+
+        #glow-insta {
+            color: #ff00ff;
+            text-shadow: 0 0 8px rgba(255, 0, 255, 0.6);
+            font-weight: bold;
+        }
+
+        #glow-priv {
+            color: #ff0000;
+            text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+            font-weight: bold;
         }
     </style>
 </head>
@@ -43,7 +70,8 @@
             <!--Tool-->
             <span><img src="static/logo.png" alt="" style="width: 35px;">
                 <a class="navbar-brand" href="https://github.com/obitouka/InstagramPrivSniffer">
-                    <strong style="font-size:18px;color:#E700FF;">INSTAGRAM</strong><strong style="font-size:18px;color:#FF0000;">PrivSniffer</strong>
+                    <strong style="font-size:18px;color:#E700FF;">INSTAGRAM</strong><strong
+                        style="font-size:18px;color:#FF0000;">PrivSniffer</strong>
                 </a>
             </span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -166,72 +194,143 @@
     </div>
 
     <!--documentation-->
-    <div class="container marketing my-4">
+    <div class="container marketing my-4 container-fluid">
         <div class="row featurette align-items-center">
+            <div class="border rounded overflow-hidden d-flex p-0" id="box1" style="height: 250px; width: 300px;">
+                <img src="static/sample.png" style="height:250px; width:300px ;object-fit:cover;" alt="">
+            </div>
             <div class="col-md-7">
                 <h2 class="featurette-heading fw-normal lh-1">
-                    First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span>
+                    <span id="glow-insta">INSTAGRAM</span><span id="glow-priv">PrivSniffer</span> :
+                    <span class="text-body-secondary">
+                        First ever tool to view "Instagram private posts" anonymously
+                    </span>
                 </h2>
                 <p class="lead">
-                    Some great placeholder content for the first featurette here. Imagine some exciting prose here.
+                    Suppose you have a private account and I have no idea who all your friends are and with whom you
+                    collaborated
+                    your post. The time when you collaborate a post with a friend having public account, this tool
+                    simply
+                    retrieves those collaborative posts, even if your own profile is set to private
                 </p>
             </div>
-            <div class="col-md-5">
-                <svg aria-label="Placeholder: 500x500"
-                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500"
-                    preserveAspectRatio="xMidYMid slice" role="img" width="500" xmlns="http://www.w3.org/2000/svg">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect>
-                    <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                </svg>
+        </div>
+
+        <!--FEATURES-->
+        <hr class="featurette-divider" style="margin-top: 50px;" />
+        <div class="row featurette align-items-center" style="margin-top: 50px;">
+            <div class="order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1 mb-3"> <strong>FEATURES:</strong> </h2>
+                
+                <!--TEXT-->
+                <ul class="lead list-unstyled mb-0">
+                    <li class="py-0">
+                        <strong style="font-weight: bold;">Digital Investigation:</strong> Assists cyber units in accessing private posts revealed
+                        via public collaboration.
+                    </li>
+                    <li class="py-0">
+                        <strong style="font-weight: bold;">Media Access:</strong> Download anonymously without any requirement of login.
+                    </li>
+                </ul>
             </div>
         </div>
 
 
-        <hr class="featurette-divider" />
-        <div class="row featurette align-items-center">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading fw-normal lh-1">
-                    Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span>
-                </h2>
-                <p class="lead">
-                    Another featurette? Of course. More placeholder content here to give you an idea of how this layout
-                    would work with some actual real-world content in place.
+        <!--Installation-->
+        <hr class="featurette-divider" style="margin-top: 50px;" />
+        <div class="row justify-content-center" style="margin-top: 50px;">
+            <h2 class="fw-normal mb-4"><strong>INSTALLATION: </strong></h2>
+
+            <!--1-->
+            <div>
+                <p class="mb-2">
+                    1. <strong>Clone:</strong> Download <a
+                        href="https://github.com/obitouka/InstagramPrivSniffer/archive/refs/heads/main.zip"
+                        style="color: #00a6ff;"> ZIP</a> or use Git:
                 </p>
+                <div style="background: #000; border: 1px solid #222; border-left: 4px solid #15ff00; padding: 10px; width: 800px; max-width: 100%;">
+                    <code style="color: #5eff00; text-shadow: 0 0 5px #22ff00; font-family: monospace;">
+                        git clone https://github.com/obitouka/InstagramPrivSniffer.git
+                    </code>
+                </div>
             </div>
-            <div class="col-md-5 order-md-1">
-                <svg aria-label="Placeholder: 500x500"
-                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500"
-                    preserveAspectRatio="xMidYMid slice" role="img" width="500" xmlns="http://www.w3.org/2000/svg">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect>
-                    <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                </svg>
+
+            <!--2-->
+            <div class="mb-4 mt-3">
+                <p class="mb-2"> 2. <strong>Setup:</strong> Install dependencies in the root folder: </p>
+                <div style="background: #000; border: 1px solid #222; border-left: 4px solid #ff00ff; padding: 10px; width: 800px; max-width: 100%;">
+                    <code style="color: #ff77ff; text-shadow: 0 0 5px #ff00ff; font-family: monospace;">
+                            python -m pip install -r requirements.txt
+                    </code>
+                </div>
             </div>
         </div>
 
 
-        <hr class="featurette-divider" />
-        <div class="row featurette  justify-content-center  align-items-center">
-            <div class="col-md-7">
-                <h2 class="featurette-heading fw-normal lh-1">
-                    And lastly, this one. <span class="text-body-secondary">Checkmate.</span>
-                </h2>
-                <p class="lead">
-                    And yes, this is the last block of representative placeholder content. Again, not really intended to
-                    be
-                    actually read, simply here to give you a better view of what this would look like with some actual
-                    content. Your content.
+        <!--HOW TO USE-->
+        <hr class="featurette-divider" style="margin-top: 50px;" />
+        <div class="row justify-content-center" style="margin-top: 50px;">
+            <div>
+                <h2 class="fw-normal mb-4"><strong>HOW TO USE:</strong></h2>
+                <!--NOTE-->
+                <p>
+                    NOTE:</strong> You have <strong>my permission</strong> to test this command on
+                    <strong>my</strong> experimental private Insta account
+                    <a href="https://www.instagram.com/keyloggerluvr"
+                        style="color: #00a6ff; text-decoration: none;">@keyloggerluvr</a>
+                    as proof that the tool works.
                 </p>
+                
+                <!--1-->
+                <div class="mb-4">
+                    <p class="mb-2">1. <strong>VIEW:</strong> Use this to access private account post links:</p>
+                    <div
+                        style="background: #000; border: 1px solid #222; border-left: 4px solid #15ff00; padding: 10px; width: 800px; max-width: 100%;">
+                        <code
+                            style="color: #5eff00; text-shadow: 0 0 5px #22ff00; font-family: monospace;">python main.py -n keyloggerluvr</code>
+                    </div>
+                </div>
+
+                <!--2-->
+                <div class="mb-4 mt-3">
+                    <p class="mb-2">2. <strong>DOWNLOAD:</strong> Use this to download and view post:</p>
+                    <div
+                        style="background: #000; border: 1px solid #222; border-left: 4px solid #ff00ff; padding: 10px; width: 800px; max-width: 100%;">
+                        <code
+                            style="color: #ff77ff; text-shadow: 0 0 5px #ff00ff; font-family: monospace;">python main.py -d https://www.instagram.com/keyloggerluvr/p/DL47hX4olz8wRQXBQ4HAaEmba9x7nC9HCSm4M80</code>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-5">
-                <svg aria-label="Placeholder: 500x500"
-                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="500"
-                    preserveAspectRatio="xMidYMid slice" role="img" width="500" xmlns="http://www.w3.org/2000/svg">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect>
-                    <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-                </svg>
+        </div>
+
+
+        <!--POC-->
+        <hr class="featurette-divider" style="margin-top: 50px;" />
+        <div class="row featurette align-items-center"  style="margin-top: 50px;">
+            <h2 class="fw-normal mb-4"><strong>Bug Bouty Program POC:</strong></h2>
+            <div>
+                <p>
+                    <b>
+                        > Date reported: 29/06/2025 <br>
+                        > Meta replied: 01/07/2025 <br>
+                        > Tool created: 09/07/2025 <br>
+                    </b>
+
+                    <img class="mt-3 container-fluid" src="static/MetaResponce.png" alt="" style="width: 50%; height: auto;"">
+                    <br><br>
+
+                    I discovered an endpoint that allowed me viewing posts from a private Instagram account revealed via 
+                    collaborating with public accounts. I reported this to Meta BBP related to privacy issue but after few days 
+                    Meta confirmed that this is <strong>intended behavior</strong> based on
+                    <a href="https://help.instagram.com/3526836317546926">Collaboration feature</a>. 
+                    Therefore, this is <strong>not a vulnerability</strong> <br> <br>
+
+                    <span style="font-size: large; font-weight: bold; color: red;">Caution:</span>
+                    <b>
+                        created for educational purposes only, so please use it ethically. 
+                        The developer is not responsible for any misuse.
+                    </b>
+                </p>
             </div>
         </div>
     </div>
