@@ -195,6 +195,8 @@
 
     <!--documentation-->
     <div class="container marketing my-4 container-fluid">
+
+        <!--ABOUT-->
         <div class="row featurette align-items-center">
             <div class="border rounded overflow-hidden d-flex p-0" id="box1" style="height: 250px; width: 300px;">
                 <img src="static/sample.png" style="height:250px; width:300px ;object-fit:cover;" alt="">
@@ -216,9 +218,10 @@
             </div>
         </div>
 
+
         <!--FEATURES-->
         <hr class="featurette-divider" style="margin-top: 50px;" />
-        <div class="row featurette align-items-center" style="margin-top: 50px;">
+        <div class="row featurette align-items-center" style="margin-top: 50px;" id="features">
             <div class="order-md-2">
                 <h2 class="featurette-heading fw-normal lh-1 mb-3"> <strong>FEATURES:</strong> </h2>
                 
@@ -238,9 +241,8 @@
 
         <!--Installation-->
         <hr class="featurette-divider" style="margin-top: 50px;" />
-        <div class="row justify-content-center" style="margin-top: 50px;">
+        <div class="row justify-content-center" style="margin-top: 50px;" id="installation">
             <h2 class="fw-normal mb-4"><strong>INSTALLATION: </strong></h2>
-
             <!--1-->
             <div>
                 <p class="mb-2">
@@ -254,7 +256,6 @@
                     </code>
                 </div>
             </div>
-
             <!--2-->
             <div class="mb-4 mt-3">
                 <p class="mb-2"> 2. <strong>Setup:</strong> Install dependencies in the root folder: </p>
@@ -269,7 +270,7 @@
 
         <!--HOW TO USE-->
         <hr class="featurette-divider" style="margin-top: 50px;" />
-        <div class="row justify-content-center" style="margin-top: 50px;">
+        <div class="row justify-content-center" style="margin-top: 50px;" id="usage">
             <div>
                 <h2 class="fw-normal mb-4"><strong>HOW TO USE:</strong></h2>
                 <!--NOTE-->
@@ -280,7 +281,6 @@
                         style="color: #00a6ff; text-decoration: none;">@keyloggerluvr</a>
                     as proof that the tool works.
                 </p>
-                
                 <!--1-->
                 <div class="mb-4">
                     <p class="mb-2">1. <strong>VIEW:</strong> Use this to access private account post links:</p>
@@ -290,7 +290,6 @@
                             style="color: #5eff00; text-shadow: 0 0 5px #22ff00; font-family: monospace;">python main.py -n keyloggerluvr</code>
                     </div>
                 </div>
-
                 <!--2-->
                 <div class="mb-4 mt-3">
                     <p class="mb-2">2. <strong>DOWNLOAD:</strong> Use this to download and view post:</p>
@@ -306,7 +305,7 @@
 
         <!--POC-->
         <hr class="featurette-divider" style="margin-top: 50px;" />
-        <div class="row featurette align-items-center"  style="margin-top: 50px;">
+        <div class="row featurette align-items-center"  style="margin-top: 50px;" id="poc">
             <h2 class="fw-normal mb-4"><strong>Bug Bouty Program POC:</strong></h2>
             <div>
                 <p>
@@ -331,6 +330,45 @@
                         The developer is not responsible for any misuse.
                     </b>
                 </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--FAQs-->
+    <div class="container" id="faq">
+        <h3 style="margin-top: 80px;"><b>FAQs:</b></h3>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Why “no posts found” even when the private account has posts?
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        Please refer to this <a
+                            href="https://github.com/obitouka/InstagramPrivSniffer/issues/14#issuecomment-3507971348">issue</a>
+                        on GitHub.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Does it support termux?
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        No, it no longer supports mobile or Termux users. This restriction was implemented to prevent
+                        misuse by users who may not fully understand how the tool works.
+                        The project was created strictly for educational purposes and has already been reported to
+                        Instagram through the bug bounty program as shown above.
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -366,13 +404,6 @@
                 <li class="ms-3">
                     <a class="text-muted" href="https://github.com/obitouka/">
                         <img src="static/icons/github.png" width="28" height="28" alt="GitHub">
-                    </a>
-                </li>
-
-                <!-- EMAIL -->
-                <li class="ms-3">
-                    <a class="text-muted" href="mailto:obitouka@protonmail.com">
-                        <img src="static/icons/protonmail.png" width="28" height="28" alt="Email">
                     </a>
                 </li>
             </ul>
